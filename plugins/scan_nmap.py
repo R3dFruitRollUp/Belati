@@ -26,7 +26,7 @@ import shlex, subprocess
 log = Logger()
 
 class ScanNmap(object):
-    def run_scanning(self, ipaddress):
+    def run_scan(self, ipaddress):
         command = "nmap -sS -A -Pn " + ipaddress
         process = subprocess.Popen(shlex.split(command), stdout=subprocess.PIPE)
         while True:
